@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  state_id: 1
+  state: MyString
+  city_id: 1
+  city: MyString
+  affected_legal_asset: MyString
+  crime_type: MyString
+  crime_subtype: MyString
+  modality: MyString
+  january_count: 1
+  february_count: 1
+  march_count: 1
+  april_count: 1
+  may_count: 1
+  june_count: 1
+  july_count: 1
+  august_count: 1
+  september_count: 1
+  october_count: 1
+  november_count: 1
+  december_count: 1
+
+two:
+  year: 1
+  state_id: 1
+  state: MyString
+  city_id: 1
+  city: MyString
+  affected_legal_asset: MyString
+  crime_type: MyString
+  crime_subtype: MyString
+  modality: MyString
+  january_count: 1
+  february_count: 1
+  march_count: 1
+  april_count: 1
+  may_count: 1
+  june_count: 1
+  july_count: 1
+  august_count: 1
+  september_count: 1
+  october_count: 1
+  november_count: 1
+  december_count: 1
