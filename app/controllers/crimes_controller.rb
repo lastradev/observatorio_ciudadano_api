@@ -1,32 +1,34 @@
 # frozen_string_literal: true
 
 class CrimesController < ApplicationController
-  before_action :set_crime, only: %i[show]
-
-  # GET /crimes
   def index
-    send_file('public/assets/crimes.csv', filename: 'crimes.csv', type: 'text/csv')
+    crimes = Crime.where(crime_params)
+
+    render json: crimes
   end
 
-  # GET /crimes/1
-  def show
-    render json: @crime
+  def count
+    count = Crime.where(crime_params).year_count
+
+    render json: count
+  end
+
+  def download
+    send_file(
+      CsvDownloaderService::FILE_PATH,
+      filename: CsvDownloaderService::FILE_NAME,
+      type: CsvDownloaderService::FILE_TYPE
+    )
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_crime
-    @crime = Crime.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
   def crime_params
-    params.require(:crime).permit(
-      %i[ year state_id state city_id city affected_legal_asset crime_type
-          crime_subtype modality january_count february_count march_count
-          april_count may_count june_count july_count august_count
-          september_count october_count november_count december_count ]
+    params.permit(
+      %i[year state_id state city_id city affected_legal_asset crime_type
+         crime_subtype modality january_count february_count march_count
+         april_count may_count june_count july_count august_count
+         september_count october_count november_count december_count]
     )
   end
 end

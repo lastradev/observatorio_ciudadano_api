@@ -2,29 +2,10 @@
 
 class CsvImporterService
   FILE_ENCODING = 'iso-8859-1'
-  KEY_TRANSLATIONS = {
-    año: :year,
-    clave_ent: :state_id,
-    entidad: :state,
-    'cve._municipio': :city_id,
-    municipio: :city,
-    bien_jurídico_afectado: :affected_legal_asset,
-    tipo_de_delito: :crime_type,
-    subtipo_de_delito: :crime_subtype,
-    modalidad: :modality,
-    enero: :january_count,
-    febrero: :february_count,
-    marzo: :march_count,
-    abril: :april_count,
-    mayo: :may_count,
-    junio: :june_count,
-    julio: :july_count,
-    agosto: :august_count,
-    septiembre: :september_count,
-    octubre: :october_count,
-    noviembre: :november_count,
-    diciembre: :december_count
-  }.freeze
+  CSV_HEADERS = %i[ año clave_ent entidad cve._municipio municipio
+                    bien_jurídico_afectado tipo_de_delito subtipo_de_delito
+                    modalidad enero febrero marzo abril mayo junio julio agosto
+                    septiembre octubre noviembre diciembre ].freeze
 
   def self.call
     new.call
@@ -43,12 +24,16 @@ class CsvImporterService
   end
 
   def options
-    { file_encoding: FILE_ENCODING, key_mapping: KEY_TRANSLATIONS }
+    { file_encoding: FILE_ENCODING, key_mapping: header_translations }
+  end
+
+  def header_translations
+    CSV_HEADERS.zip(Crime.column_names - %w[id updated_at created_at]).to_h
   end
 
   def import_row(row)
-    return unless ["Tampico", "Altamira", "Ciudad Madero"].include?(row[:city])
+    return unless ['Tampico', 'Altamira', 'Ciudad Madero'].include?(row['city'])
 
-    Crime.create!(row)
+    Crime.find_or_create_by!(row)
   end
 end
