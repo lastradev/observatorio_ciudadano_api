@@ -1,4 +1,1 @@
-Queremos este directorio agregado por git. Aquí se almacena el CSV que se importa
-a la base de datos, pero no se puede descargar si el directorio no existe, nos
-facilita clonarlo con git en lugar de crearlo manualmente cada que tengamos que regenerar
-el servidor o algo parecido.
+Git no acepta este directorio a menos que exista un archivo en el (motivo de este readme). Aquí se almacena el CSV que se puede descargar con `rake csv:download` que contiene la totalidad de crimenes en México.
