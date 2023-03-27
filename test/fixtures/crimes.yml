@@ -1,15 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  year: 1
-  state_id: 1
-  state: MyString
-  city_id: 1
-  city: MyString
-  affected_legal_asset: MyString
-  crime_type: MyString
-  crime_subtype: MyString
-  modality: MyString
+theft:
+  year: 2020
+  state_id: 28
+  state: Tamaulipas
+  city_id: 28038
+  city: Tampico
+  affected_legal_asset: El patrimonio
+  crime_type: Robo
+  crime_subtype: Otros robos
+  modality: Sin violencia
   january_count: 1
   february_count: 1
   march_count: 1
@@ -23,16 +21,16 @@ one:
   november_count: 1
   december_count: 1
 
-two:
-  year: 1
-  state_id: 1
-  state: MyString
-  city_id: 1
-  city: MyString
-  affected_legal_asset: MyString
-  crime_type: MyString
-  crime_subtype: MyString
-  modality: MyString
+fraud:
+  year: 2020
+  state_id: 28
+  state: Tamaulipas
+  city_id: 28038
+  city: Tampico
+  affected_legal_asset: El patrimonio
+  crime_type: Fraude
+  crime_subtype: Fraude
+  modality: Fraude
   january_count: 1
   february_count: 1
   march_count: 1
