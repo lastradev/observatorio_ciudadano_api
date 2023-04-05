@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class CrimesControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @crime = crimes(:one)
-  end
-
   test 'should get index' do
     get crimes_url, as: :json
     assert_response :success
@@ -18,6 +14,11 @@ class CrimesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should get crimes count' do
     get crimes_count_url, as: :json
+    assert_response :success
+  end
+
+  test 'should get robberies' do
+    get crimes_robberies_url, as: :json
     assert_response :success
   end
 end

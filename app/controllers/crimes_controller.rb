@@ -2,15 +2,19 @@
 
 class CrimesController < ApplicationController
   def index
-    crimes = Crime.where(crime_params)
-
     render json: crimes
   end
 
   def count
-    count = Crime.where(crime_params).year_count
+    count = crimes.year_count
 
     render json: count
+  end
+
+  def robberies
+    robberies = crimes.robberies
+
+    render json: robberies
   end
 
   def download
@@ -30,5 +34,9 @@ class CrimesController < ApplicationController
          april_count may_count june_count july_count august_count
          september_count october_count november_count december_count]
     )
+  end
+
+  def crimes
+    Crime.where(crime_params)
   end
 end

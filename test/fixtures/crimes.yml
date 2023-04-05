@@ -43,3 +43,49 @@ fraud:
   october_count: 1
   november_count: 1
   december_count: 1
+
+robbery:
+  year: 2019
+  state_id: 28
+  state: Tamaulipas
+  city_id: 28038
+  city: Tampico
+  affected_legal_asset: El patrimonio
+  crime_type: Robo
+  crime_subtype: Otros robos
+  modality: Con violencia
+  january_count: 1
+  february_count: 1
+  march_count: 1
+  april_count: 1
+  may_count: 1
+  june_count: 1
+  july_count: 1
+  august_count: 1
+  september_count: 1
+  october_count: 1
+  november_count: 1
+  december_count: 1
+
+motorcycle_robbery:
+  year: 2019
+  state_id: 28
+  state: Tamaulipas
+  city_id: 28038
+  city: Tampico
+  affected_legal_asset: El patrimonio
+  crime_type: Robo
+  crime_subtype: Robo de vehículo automotor
+  modality: Robo de motocicleta Con violencia
+  january_count: 1
+  february_count: 1
+  march_count: 1
+  april_count: 1
+  may_count: 1
+  june_count: 1
+  july_count: 1
+  august_count: 1
+  september_count: 1
+  october_count: 1
+  november_count: 1
+  december_count: 1
