@@ -6,9 +6,7 @@ class CrimesController < ApplicationController
   end
 
   def robberies
-    robberies = crimes.robberies
-
-    render json: robberies
+    @robberies = crimes.robberies
   end
 
   def download
