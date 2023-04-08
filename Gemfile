@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -56,3 +58,5 @@ gem 'httparty', '~> 0.21.0'
 gem 'smarter_csv', '~> 1.7'
 
 gem 'whenever', '~> 1.0', require: false
+
+gem "kaminari", "~> 1.2"

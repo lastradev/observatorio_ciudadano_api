@@ -1,1 +1,0 @@
-Git no acepta este directorio a menos que exista un archivo en el (motivo de este readme). Aquí se almacena el CSV que se puede descargar con `rake csv:download` que contiene la totalidad de crimenes en México.

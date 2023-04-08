@@ -2,10 +2,11 @@
 
 Rails.application.routes.draw do
   root 'home#index'
-  resources :crimes, only: %i[index]
-  namespace :crimes do
-    get :download
-    get :count
-    get :robberies
+  defaults format: :json do
+    resources :crimes, only: %i[index]
+    namespace :crimes do
+      get :download
+      get :robberies
+    end
   end
 end
