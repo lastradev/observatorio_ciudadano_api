@@ -15,9 +15,9 @@ RUN bundle config --global frozen 1
 RUN bundle install
 
 COPY . /usr/src/app
+RUN chmod +x /usr/src/app/scripts/entry.sh
 
 RUN whenever --update-crontab
-RUN cron &
 
 EXPOSE 3000
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["/usr/src/app/scripts/entry.sh"]
