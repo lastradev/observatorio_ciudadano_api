@@ -6,24 +6,115 @@ info:
 paths:
   "/crimes":
     get:
-      summary: list crimes
+      summary: List crimes
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: year
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: city
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: affected_legal_asset
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: crime_type
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: crime_subtype
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: modality
+        in: query
+        required: false
+        schema:
+          type: string
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagination:
+                    type: object
+                    properties:
+                      page:
+                        type: integer
+                      total:
+                        type: integer
+                      next_page:
+                        type: string
+                  crime_count:
+                    type: integer
+                  content:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        year:
+                          type: integer
+                        state:
+                          type: string
+                        city:
+                          type: string
+                        affected_legal_asset:
+                          type: string
+                        crime_type:
+                          type: string
+                        crime_subtype:
+                          type: string
+                        modality:
+                          type: string
+                        january_count:
+                          type: integer
+                        february_count:
+                          type: integer
+                        march_count:
+                          type: integer
+                        april_count:
+                          type: integer
+                        may_count:
+                          type: integer
+                        june_count:
+                          type: integer
+                        july_count:
+                          type: integer
+                        august_count:
+                          type: integer
+                        september_count:
+                          type: integer
+                        october_count:
+                          type: integer
+                        november_count:
+                          type: integer
+                        december_count:
+                          type: integer
+                description: 'yes'
   "/crimes/download":
     get:
-      summary: download crime
+      summary: Download crimes CSV
       responses:
         '200':
           description: successful
   "/crimes/robberies":
     get:
-      summary: robberies crime
+      summary: List robberies
       responses:
         '200':
           description: successful
-servers:
-- url: https://{defaultHost}
-  variables:
-    defaultHost:
-      default: www.example.com

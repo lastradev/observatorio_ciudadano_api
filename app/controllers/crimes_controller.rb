@@ -20,7 +20,7 @@ class CrimesController < ApplicationController
   private
 
   def crime_params
-    params.except(:page, :format).permit(%i[year state city affected_legal_asset crime_type crime_subtype modality])
+    params.except(:page, :format).permit(%i[year city affected_legal_asset crime_type crime_subtype modality])
   end
 
   def crimes
