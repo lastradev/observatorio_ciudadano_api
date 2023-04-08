@@ -2,7 +2,7 @@
 
 class CrimesController < ApplicationController
   def index
-    render json: crimes
+    @crimes = crimes
   end
 
   def count

@@ -88,6 +88,9 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    jbuilder (2.11.5)
+      actionview (>= 5.0.0)
+      activesupport (>= 5.0.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -179,6 +182,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   httparty (~> 0.21.0)
+  jbuilder
   mysql2 (~> 0.5)
   nokogiri (~> 1.14)
   pry-byebug (~> 3.10)
