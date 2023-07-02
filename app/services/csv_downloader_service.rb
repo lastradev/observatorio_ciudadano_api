@@ -30,7 +30,7 @@ class CsvDownloaderService
     format(
       GDRIVE_API_URL_TEMPLATE,
       file_id:,
-      api_key: ENV['GDRIVE_API_KEY']
+      api_key: ENV.fetch('GDRIVE_API_KEY', nil)
     )
   end
 

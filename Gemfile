@@ -45,6 +45,11 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug', '~> 3.10'
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'rubocop', '~> 1.50', require: false
+  gem 'rubocop-rails', require: false
+  gem 'ruby-lsp', require: false
+  gem 'solargraph', group: :development
+  gem 'solargraph-rails', group: :development
 end
 
 group :development do
