@@ -7,6 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Downlad and import CSV to DB
-# puts 'Synching database this is gonna take some time...'
-# CsvDownloaderService.call
-# CsvImporterService.call
+puts 'Synching database this is gonna take some time...'
+CsvDownloaderService.call
+CsvImporterService.call
