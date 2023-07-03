@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'support_requests/update'
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/swagger'
-  root to: redirect('/api-docs')
   defaults format: :json do
     resources :crimes, only: %i[index]
     namespace :crimes do
