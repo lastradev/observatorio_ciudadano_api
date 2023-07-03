@@ -1,0 +1,3 @@
+0 0 * * * /bin/bash -l -c 'cd /Users/oscar/work/observatorio_ciudadano_api && RAILS_ENV=production bundle exec rake csv:download --silent >> /tmp/cron_log.log 2>&1'
+
+0 1 * * * /bin/bash -l -c 'cd /Users/oscar/work/observatorio_ciudadano_api && RAILS_ENV=production bundle exec rake csv:import --silent >> /tmp/cron_log.log 2>&1'

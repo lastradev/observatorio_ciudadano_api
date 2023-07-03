@@ -3,18 +3,18 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.1'
+ruby '3.2.2'
 
 gem 'dotenv-rails', groups: %i[development test]
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
+# Use main development branch of Rails
+gem 'rails', github: 'rails/rails', branch: 'main'
 
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 6.0'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
@@ -44,7 +44,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug', '~> 3.10'
-  gem 'rspec-rails', '~> 6.0.0'
+  gem 'rspec-rails'
+  gem 'rswag-specs'
   gem 'rubocop', '~> 1.50', require: false
   gem 'rubocop-rails', require: false
   gem 'ruby-lsp', require: false
@@ -65,6 +66,7 @@ gem 'smarter_csv', '~> 1.7'
 
 gem 'whenever', '~> 1.0', require: false
 
-gem "kaminari", "~> 1.2"
+gem 'kaminari', '~> 1.2'
 
-gem "rswag", "~> 2.8"
+gem 'rswag-api'
+gem 'rswag-ui'

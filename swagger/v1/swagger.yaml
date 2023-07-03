@@ -105,7 +105,6 @@ paths:
                           type: integer
                         december_count:
                           type: integer
-                description: 'yes'
   "/crimes/download":
     get:
       summary: Download crimes CSV
