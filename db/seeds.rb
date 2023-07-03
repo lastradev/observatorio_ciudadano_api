@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Downlad and import CSV to DB
-CsvDownloaderService.call
-CsvImporterService.call
+# CsvDownloaderService.call
+# CsvImporterService.call
