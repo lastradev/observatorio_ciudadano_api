@@ -2,7 +2,7 @@
 
 class CsvDownloaderService
   FILE_NAME = 'crimes.csv'
-  FILE_PATH = "public/assets/#{FILE_NAME}".freeze
+  FILE_PATH = "tmp/#{FILE_NAME}".freeze
   FILE_TYPE = 'text/csv'
   FILE_ID_REGEX = /[-\w]{25,}(?!.*[-\w]{25,})/
   GDRIVE_API_URL_TEMPLATE = 'https://www.googleapis.com/drive/v3/files/%<file_id>s?key=%<api_key>s&alt=media'
