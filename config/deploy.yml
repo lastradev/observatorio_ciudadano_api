@@ -8,11 +8,6 @@ image: lastradev/observatorio-ciudadano-api
 servers:
   web:
     - 150.136.105.238
-  cron:
-    hosts:
-      - 150.136.105.238
-    cmd:
-      bash -c "cat config/crontab | crontab - && cron -f"
 
 # Credentials for your image host.
 registry:
