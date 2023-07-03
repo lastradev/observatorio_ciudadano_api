@@ -36,6 +36,5 @@
 /node_modules/
 /app/assets/builds/*
 !/app/assets/builds/.keep
-/public/assets
 
 public/assets/crimes.csv
