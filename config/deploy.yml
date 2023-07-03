@@ -31,6 +31,7 @@ env:
   secret:
     - RAILS_MASTER_KEY
     - PRODUCTION_DATABASE_URL
+    - GDRIVE_API_KEY
 
 # Use a different ssh user than root
 ssh:
